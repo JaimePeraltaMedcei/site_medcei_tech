@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <title>Contactos | Medcei Tech</title>
+  <meta name="description" content="Fale com a Medcei: 308 800 709, disponível 24 horas, geral@medcei.com. Escritórios na Sra. da Hora, Matosinhos, e na Caparica.">
+  <!-- include:head -->
+</head>
+<body data-page="contactos">
+  <!-- include:header -->
+
+  <main id="conteudo">
+    <section class="contact contact--page" aria-labelledby="t-contact" data-page-hero>
+      <div class="container">
+        <nav class="crumbs crumbs--light" aria-label="Localização"><a href="/">Início</a><span aria-current="page">Contactos</span></nav>
+        <div class="contact__grid">
+          <div>
+            <h1 class="contact__title" id="t-contact" data-hero-split>Fale connosco</h1>
+            <p class="contact__lead">Diga-nos para quem é. Respondemos com uma proposta e marcamos a avaliação gratuita.</p>
+            <a class="contact__phone" href="tel:+351308800709">308 800 709</a>
+            <p class="contact__small">Disponível 24 horas, custo de chamada normal</p>
+            <a class="contact__mail" href="mailto:geral@medcei.com">geral@medcei.com</a>
+          </div>
+          <form class="form" data-contact novalidate>
+            <div class="form__seg" role="radiogroup" aria-label="Para quem é">
+              <label><input type="radio" name="para" value="familia" checked><span>Para a família</span></label>
+              <label><input type="radio" name="para" value="organizacao"><span>Para uma organização</span></label>
+            </div>
+            <label class="field">
+              <span>Nome</span>
+              <input name="nome" type="text" autocomplete="name" required>
+            </label>
+            <label class="field" data-org-only hidden>
+              <span>Organização</span>
+              <input name="organizacao" type="text" autocomplete="organization">
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+            <label class="field">
+              <span>Telefone (opcional)</span>
+              <input name="telefone" type="tel" autocomplete="tel">
+            </label>
+            <label class="field">
+              <span>Interesse</span>
+              <select name="interesse">
+                <option>SafeMove</option>
+                <option>SmartDose</option>
+                <option>WoundCare</option>
+                <option>Super App</option>
+                <option>SmartDose e WoundCare</option>
+                <option>Vários produtos</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Mensagem (opcional)</span>
+              <textarea name="mensagem" rows="3"></textarea>
+            </label>
+            <p class="form__error" data-form-error role="alert"></p>
+            <button class="btn btn--primary btn--lg" type="submit" data-magnetic>Enviar pedido</button>
+            <p class="form__hint">Abre o seu email com a mensagem pronta para geral@medcei.com.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="offices" aria-labelledby="t-offices">
+      <div class="container">
+        <h2 class="section-title" id="t-offices" data-split>Escritórios</h2>
+        <div class="offices__grid">
+          <article class="office" data-reveal>
+            <h3>Porto</h3>
+            <address>R. de Oslo, Nº 87, AC184<br>Centro Comercial Londres<br>Sra. da Hora, Matosinhos</address>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=R.+de+Oslo+87+Senhora+da+Hora+Matosinhos" rel="noopener" target="_blank">Ver no mapa</a>
+          </article>
+          <article class="office" data-reveal>
+            <h3>Lisboa</h3>
+            <address>R. António Gião 2<br>2829-513 Caparica</address>
+            <p class="office__note">Apenas com marcação prévia</p>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Ant%C3%B3nio+Gi%C3%A3o+2+2829-513+Caparica" rel="noopener" target="_blank">Ver no mapa</a>
+          </article>
+          <article class="office office--teams" data-reveal>
+            <h3>Equipas locais</h3>
+            <p>Porto, Braga, Viana do Castelo e Aveiro, com serviço em todo o Portugal Continental.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- include:footer -->
+</body>
+</html>
