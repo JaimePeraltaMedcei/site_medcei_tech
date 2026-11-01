@@ -51,17 +51,18 @@ src/modules/       um módulo por comportamento; cada um só atua se a sua secç
 src/data/day.js    eventos do "Um dia em casa"
 ```
 
-## Publicação (Cloudflare Pages)
+## Publicação (Cloudflare)
 
-- Comando de build: `npm run build`
-- Pasta de saída: `dist`
-- Domínio personalizado: `tech.medcei.pt`
-
-Publicação manual com Wrangler:
+O site é servido pelo Cloudflare Workers como ficheiros estáticos (`wrangler.jsonc`), no domínio
+`tech.medcei.pt`. Para publicar uma nova versão:
 
 ```bash
-npx wrangler pages deploy dist --project-name medcei-tech
+npm run build
+npx wrangler deploy
 ```
+
+A página 404 e as barras finais dos endereços são tratadas pelo Cloudflare (`not_found_handling` e
+`html_handling`); `public/_headers` define a cache dos ficheiros em `/assets/`.
 
 ## Notas
 
