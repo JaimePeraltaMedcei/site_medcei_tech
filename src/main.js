@@ -24,6 +24,9 @@ import { initContact } from './modules/contact.js';
 import { initFooter } from './modules/footer.js';
 import { initMagnetic } from './modules/magnetic.js';
 import { initUiFragments } from './modules/ui-fragments.js';
+import { initRoles } from './modules/roles.js';
+import { initRecommender } from './modules/recommender.js';
+import { initStickyCta } from './modules/sticky-cta.js';
 
 // Every page loads this file; each module returns early when its section is absent.
 const reduced = prefersReducedMotion();
@@ -31,6 +34,8 @@ const lenis = reduced ? null : initSmoothScroll();
 
 initContact();
 initFaq();
+initRoles();
+initRecommender();
 initUiFragments({ reduced });
 initTransitions({ reduced });
 
@@ -55,8 +60,9 @@ if (reduced) {
   initMagnetic();
 }
 
-// Created last: its section triggers must measure the pinned layout above.
+// Created last: their triggers must measure the pinned layout above.
 initNav();
+initStickyCta();
 
 runLoader({ reduced, lenis }).then(() => {
   if (!reduced) {

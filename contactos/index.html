@@ -15,52 +15,76 @@
         <div class="contact__grid">
           <div>
             <h1 class="contact__title" id="t-contact" data-hero-split>Marcar demonstração</h1>
-            <p class="contact__lead">30 minutos, por videochamada ou no seu escritório. Mostramos os produtos com casos parecidos com os da sua empresa e respondemos às suas perguntas.</p>
-            <a class="contact__phone" href="mailto:geral@medcei.com">geral@medcei.com</a>
-            <p class="contact__small">Ou ligue para o 308 800 709</p>
+            <p class="contact__lead">Gratuita e sem compromisso: 30 minutos, por videochamada ou no seu escritório, com casos parecidos com os da sua empresa.</p>
+            <ol class="next">
+              <li><div><b>Respondemos ao seu pedido</b>Por email ou telefone, para combinar o dia e a hora.</div></li>
+              <li><div><b>Demonstração de 30 minutos</b>Com os seus serviços, a sua equipa e as suas dúvidas.</div></li>
+              <li><div><b>Proposta com o valor mensal</b>E o plano de implementação, migração e formação.</div></li>
+            </ol>
+            <a class="contact__phone" href="tel:+351308800709">308 800 709</a>
+            <p class="contact__small">Prefere falar já? Ligue ou escreva para geral@medcei.com</p>
           </div>
           <form class="form" data-contact novalidate>
-            <label class="field">
-              <span>Nome</span>
-              <input name="nome" type="text" autocomplete="name" required>
-            </label>
-            <label class="field">
-              <span>Empresa</span>
-              <input name="empresa" type="text" autocomplete="organization" required>
-            </label>
-            <label class="field">
-              <span>Email profissional</span>
-              <input name="email" type="email" autocomplete="email" required>
-            </label>
-            <label class="field">
-              <span>Telefone (opcional)</span>
-              <input name="telefone" type="tel" autocomplete="tel">
-            </label>
-            <label class="field">
-              <span>Produto</span>
-              <select name="interesse">
-                <option>Plataforma completa</option>
-                <option>CRM</option>
-                <option>Recrutamento</option>
-                <option>App para famílias</option>
-              </select>
-            </label>
-            <label class="field">
-              <span>Tamanho da equipa</span>
-              <select name="equipa">
-                <option>Até 10 pessoas</option>
-                <option>11 a 50 pessoas</option>
-                <option>51 a 200 pessoas</option>
-                <option>Mais de 200 pessoas</option>
-              </select>
-            </label>
+            <div class="form__row">
+              <label class="field">
+                <span>Nome</span>
+                <input name="nome" type="text" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span>Empresa</span>
+                <input name="empresa" type="text" autocomplete="organization" required>
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="field">
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required>
+              </label>
+              <label class="field">
+                <span>Telefone (opcional)</span>
+                <input name="telefone" type="tel" autocomplete="tel">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="field">
+                <span>Produto</span>
+                <select name="interesse">
+                  <option>Plataforma completa</option>
+                  <option>CRM</option>
+                  <option>Recrutamento</option>
+                  <option>App para famílias</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Tamanho da equipa</span>
+                <select name="equipa">
+                  <option>Até 10 pessoas</option>
+                  <option>11 a 50 pessoas</option>
+                  <option>51 a 200 pessoas</option>
+                  <option>Mais de 200 pessoas</option>
+                </select>
+              </label>
+            </div>
+            <div class="form__pick">
+              <span id="l-altura">Melhor altura para a demonstração</span>
+              <div class="form__seg" role="radiogroup" aria-labelledby="l-altura">
+                <label><input type="radio" name="altura" value="Manhã"><span>Manhã</span></label>
+                <label><input type="radio" name="altura" value="Tarde"><span>Tarde</span></label>
+                <label><input type="radio" name="altura" value="Indiferente" checked><span>Indiferente</span></label>
+              </div>
+            </div>
             <label class="field">
               <span>O que quer resolver? (opcional)</span>
               <textarea name="mensagem" rows="3"></textarea>
             </label>
             <p class="form__error" data-form-error role="alert"></p>
-            <button class="btn btn--primary btn--lg" type="submit" data-magnetic>Pedir demonstração</button>
-            <p class="form__hint">Abre o seu email com o pedido pronto para geral@medcei.com.</p>
+            <button class="btn btn--primary btn--lg" type="submit" data-magnetic>Pedir demonstração gratuita</button>
+            <ul class="form__trust">
+              <li>Sem compromisso</li>
+              <li>Sem cartão de crédito</li>
+              <li>Resposta por email ou telefone</li>
+            </ul>
+            <p class="form__hint">Ao enviar, abre o seu email com o pedido pronto para geral@medcei.com.</p>
           </form>
         </div>
       </div>

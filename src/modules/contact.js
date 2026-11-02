@@ -10,9 +10,15 @@ export function initContact() {
   const { elements } = form;
   const error = form.querySelector('[data-form-error]');
 
-  const interest = new URLSearchParams(location.search).get('interesse');
+  const params = new URLSearchParams(location.search);
+  const interest = params.get('interesse');
   if (interest && [...elements.interesse.options].some((o) => o.value === interest)) {
     elements.interesse.value = interest;
+  }
+  // Goals chosen in "Por onde começar" arrive as the start of the message.
+  const goals = params.get('objetivos');
+  if (goals && elements.mensagem && !elements.mensagem.value) {
+    elements.mensagem.value = `Quero resolver: ${goals.split('; ').join(', ').toLowerCase()}.`;
   }
 
   form.addEventListener('submit', (e) => {
@@ -45,6 +51,7 @@ export function initContact() {
       `Nome: ${value('nome')}`,
       `Empresa: ${value('empresa')}`,
       `Tamanho da equipa: ${value('equipa')}`,
+      `Melhor altura: ${elements.altura?.value || 'Indiferente'}`,
       `Email: ${value('email')}`,
       value('telefone') ? `Telefone: ${value('telefone')}` : null,
     ].filter((line) => line !== null).join('\n');

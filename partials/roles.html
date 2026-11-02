@@ -1,0 +1,87 @@
+    <section class="roles" aria-labelledby="t-roles" data-roles>
+      <div class="container">
+        <h2 class="section-title" id="t-roles" data-split>O que muda para cada pessoa da equipa</h2>
+        <div class="roles__tabs" role="tablist" aria-label="Funções">
+          <button class="roles__tab" type="button" role="tab" id="tab-direcao" aria-controls="role-direcao" aria-selected="true">Direção</button>
+          <button class="roles__tab" type="button" role="tab" id="tab-coordenacao" aria-controls="role-coordenacao" aria-selected="false">Coordenação</button>
+          <button class="roles__tab" type="button" role="tab" id="tab-comercial" aria-controls="role-comercial" aria-selected="false">Comercial</button>
+          <button class="roles__tab" type="button" role="tab" id="tab-rh" aria-controls="role-rh" aria-selected="false">Recursos humanos</button>
+          <button class="roles__tab" type="button" role="tab" id="tab-familias" aria-controls="role-familias" aria-selected="false">Apoio às famílias</button>
+        </div>
+
+        <div class="roles__panel" role="tabpanel" id="role-direcao" aria-labelledby="tab-direcao">
+          <div class="roles__copy">
+            <p class="roles__who">Para a direção</p>
+            <h3>A empresa inteira num painel, e o saldo de daqui a seis meses</h3>
+            <ul class="checklist">
+              <li>Entradas, saídas e resultado por mês, e margem por cliente</li>
+              <li>Previsão de tesouraria com alerta antes do limite</li>
+              <li>Registo de auditoria: quem alterou o quê, e quando</li>
+            </ul>
+          </div>
+          <div class="roles__media">
+<!-- include:ui/crm-finance -->
+          </div>
+        </div>
+
+        <div class="roles__panel" role="tabpanel" id="role-coordenacao" aria-labelledby="tab-coordenacao">
+          <div class="roles__copy">
+            <p class="roles__who">Para a coordenação</p>
+            <h3>O dia de cada técnico numa grelha, e as faltas à vista</h3>
+            <ul class="checklist">
+              <li>Alocar técnicos e viaturas a cada visita, regular ou pontual</li>
+              <li>Ver logo o que está sem técnico</li>
+              <li>Corrigir picagens e acompanhar a assiduidade</li>
+            </ul>
+          </div>
+          <div class="roles__media">
+<!-- include:ui/crm-planning -->
+          </div>
+        </div>
+
+        <div class="roles__panel" role="tabpanel" id="role-comercial" aria-labelledby="tab-comercial">
+          <div class="roles__copy">
+            <p class="roles__who">Para o comercial</p>
+            <h3>Nenhum pedido esquecido, nenhum orçamento ao calhas</h3>
+            <ul class="checklist">
+              <li>Pipeline de leads com follow-ups e visitas no calendário</li>
+              <li>Orçamento calculado com os escalões da empresa</li>
+              <li>Contrato gerado a partir do orçamento aprovado</li>
+            </ul>
+          </div>
+          <div class="roles__media">
+<!-- include:ui/crm-leads -->
+          </div>
+        </div>
+
+        <div class="roles__panel" role="tabpanel" id="role-rh" aria-labelledby="tab-rh">
+          <div class="roles__copy">
+            <p class="roles__who">Para os recursos humanos</p>
+            <h3>Da candidatura à contratação, sem ler CVs à mão</h3>
+            <ul class="checklist">
+              <li>Candidaturas num quadro por estado, com os dias em cada um</li>
+              <li>CV lido pela IA e entrevista resumida e pontuada</li>
+              <li>Piquetes para cobrir faltas no próprio dia</li>
+            </ul>
+          </div>
+          <div class="roles__media">
+<!-- include:ui/rh-pipeline -->
+          </div>
+        </div>
+
+        <div class="roles__panel" role="tabpanel" id="role-familias" aria-labelledby="tab-familias">
+          <div class="roles__copy">
+            <p class="roles__who">Para quem fala com as famílias</p>
+            <h3>As perguntas chegam por escrito, por ordem de prioridade</h3>
+            <ul class="checklist">
+              <li>Uma conversa por família, vinda da app</li>
+              <li>Prioridade, notas internas e respostas rápidas</li>
+              <li>Menos telefonemas: horário, cuidados e pagamentos já estão na app</li>
+            </ul>
+          </div>
+          <div class="roles__media">
+<!-- include:ui/crm-support -->
+          </div>
+        </div>
+      </div>
+    </section>
