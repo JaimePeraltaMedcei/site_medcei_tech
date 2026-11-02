@@ -21,11 +21,11 @@ function findPages(dir = root, pages = {}) {
   return pages;
 }
 
-// <!-- include:name --> is replaced with partials/name.html, so the header,
-// footer and closing call to action are written once.
+// <!-- include:name --> is replaced with partials/name.html (subfolders allowed,
+// e.g. include:ui/crm-finance), so shared blocks are written once.
 function htmlIncludes() {
   const include = (html, depth = 0) =>
-    html.replace(/<!--\s*include:([\w-]+)\s*-->/g, (_, name) => {
+    html.replace(/<!--\s*include:([\w/-]+)\s*-->/g, (_, name) => {
       if (depth > 5) throw new Error(`Include loop at ${name}`);
       return include(readFileSync(resolve(partialsDir, `${name}.html`), 'utf8'), depth + 1);
     });

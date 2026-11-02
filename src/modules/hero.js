@@ -13,10 +13,10 @@ export function initHero() {
   const disc = hero.querySelector('[data-hero-disc]');
   const discFill = disc.querySelector('span');
   const product = hero.querySelector('[data-hero-product]');
-  const productImg = product.querySelector('img');
+  const productImg = product.firstElementChild; // the picture or interface inside the product slot
   const foot = hero.querySelector('[data-hero-foot]');
 
-  const split = SplitText.create(lines, { type: 'chars', mask: 'chars' });
+  const split = SplitText.create(lines, { type: 'words,chars', mask: 'chars' });
 
   // Intro, played once the loader lifts.
   intro = gsap

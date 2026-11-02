@@ -1,0 +1,197 @@
+/* Sections for the B2B product site: product panels with interface fragments,
+   module rows, plans and the products menu. */
+
+/* ---------- Hero: the family app phone sits in the disc ---------- */
+.hero__product--ui { width: auto; }
+.hero__product--ui .ui-phone { font-size: min(1.55vh, 1.05vw); }
+.hero__product--ui .ui { filter: drop-shadow(0 40px 50px rgba(30, 37, 41, 0.28)); }
+@media (max-width: 760px) {
+  .hero__product--ui .ui-phone { font-size: min(1.25vh, 2.6vw); }
+}
+
+/* ---------- Product panels (home) ---------- */
+.panel { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); }
+.panel--crm { background: var(--mist); }
+.panel--rh { background: var(--yellow); }
+.panel--app { background: var(--ink); color: var(--paper); }
+.panel--crm .panel__kind { color: var(--green-deep); }
+.panel--app .panel__kind { color: var(--green); }
+.panel--crm .panel__features li::before { background: var(--green-deep); }
+.panel--app .panel__features li::before { background: var(--green); }
+.panel__stage--ui { width: 100%; }
+.panel__stage--ui > .ui:not(.ui--phone) { width: 100%; }
+.panel__stage--ui > .ui--phone { justify-self: center; }
+.panel__stage--ui .ui-phone { font-size: min(1.45vh, 1.15vw); }
+@media (max-width: 900px) {
+  .panel { grid-template-columns: 1fr; }
+  .panel__stage--ui .ui-phone { font-size: 2.6vw; }
+}
+
+/* ---------- Sequence with a phone ---------- */
+.sequence__device { position: relative; }
+.sequence__device .ui-phone { font-size: min(1.5vh, 1.1vw); }
+@media (max-width: 900px) { .sequence__device .ui-phone { font-size: 2.6vw; } }
+
+/* ---------- Product page hero ---------- */
+.p-hero--crm { background: var(--mist); }
+.p-hero--rh { background: var(--yellow); }
+.p-hero--app { background: var(--ink); color: var(--paper); }
+.p-hero--rh .p-hero__kind, .p-hero--rh .crumbs, .p-hero--rh .crumbs [aria-current] { color: var(--ink); }
+.p-hero--app .p-hero__kind { color: var(--green); }
+.p-hero--app .p-hero__lead { color: #d5dcdf; }
+.p-hero--app .crumbs { color: var(--muted-dark); }
+.p-hero--app .crumbs [aria-current], .p-hero--app .crumbs a:hover { color: var(--paper); }
+.p-hero--app .p-hero__disc { background: var(--green); }
+.p-hero--app .p-hero__name { font-size: clamp(48px, 6.2vw, 104px); }
+.p-hero__grid--ui { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); }
+.p-hero__media--ui { width: 100%; }
+.p-hero__media--ui .ui { width: 100%; }
+.p-hero__media--phone .ui-phone { font-size: min(1.55vh, 1.15vw); }
+@media (max-width: 900px) {
+  .p-hero__grid--ui { grid-template-columns: 1fr; }
+  .p-hero__media--phone .ui-phone { font-size: 2.7vw; }
+}
+
+/* ---------- Jump links ---------- */
+.jump { position: sticky; top: calc(var(--nav-h) + 8px); z-index: 20; padding: 10px 0; pointer-events: none; }
+.jump__inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+.jump a {
+  pointer-events: auto;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 0 0 1px var(--line);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.jump a:hover, .jump a.is-active { background: var(--ink); color: var(--paper); }
+@media (max-width: 900px) { .jump { display: none; } }
+
+/* ---------- Module rows ---------- */
+.mods { background: var(--paper); }
+.mod { padding: clamp(72px, 10vw, 150px) 0; scroll-margin-top: calc(var(--nav-h) + 40px); }
+.mod--alt { background: var(--mist); }
+.mod__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 88px); align-items: center; }
+.mod--alt .mod__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.mod--alt .mod__grid--phone { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+.mod--alt .mod__grid > .mod__media { order: -1; }
+.mod__grid--phone { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+.mod__grid--text { align-items: start; }
+.mod__copy { display: grid; gap: 22px; align-content: start; }
+.mod__kind { font-size: var(--fs-s); font-weight: 500; color: var(--green-deep); }
+.mod__title { max-width: 16ch; font-size: clamp(32px, 3.7vw, 58px); font-weight: 600; line-height: 1.02; letter-spacing: -0.04em; }
+.mod__lead { max-width: 32em; font-size: var(--fs-s); line-height: 1.55; }
+.mod .checklist li { font-size: 17px; }
+.mod__media { min-width: 0; }
+.mod__media .ui:not(.ui--phone) { width: 100%; }
+.mod__media--phones { display: flex; justify-content: center; gap: clamp(12px, 2vw, 32px); }
+.mod__media--phones .ui-phone { font-size: min(1.45vh, 1.05vw); }
+.mod__media--phones .ui:nth-child(2) { margin-top: 12%; }
+.mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mini-grid li { display: grid; gap: 10px; padding: 28px; border-radius: var(--radius-m); background: var(--mist); }
+.mini-grid h3 { font-size: 21px; font-weight: 600; letter-spacing: -0.02em; }
+.mini-grid p { font-size: 16px; color: var(--grey); }
+@media (max-width: 900px) {
+  .mod__grid, .mod__grid--phone, .mod--alt .mod__grid, .mod--alt .mod__grid--phone { grid-template-columns: 1fr; }
+  .mod--alt .mod__grid > .mod__media { order: 0; }
+  .mod__media--phones .ui-phone { font-size: 2.3vw; }
+  .mini-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Catalog items with interfaces ---------- */
+.item { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); }
+.item--crm { background: var(--mist); }
+.item--rh { background: var(--yellow); }
+.item--app { background: var(--ink); color: var(--paper); }
+.item__media--ui, .item__media--ui .ui { width: 100%; }
+.item__media--phone .ui-phone { font-size: min(1.4vh, 1.05vw); }
+@media (max-width: 900px) {
+  .item { grid-template-columns: 1fr; }
+  .item__media--phone .ui-phone { font-size: 2.5vw; }
+}
+
+/* ---------- Steps with interfaces ---------- */
+.step__ui { min-width: 0; }
+.step__ui .ui { width: 100%; font-size: clamp(8px, 0.8vw, 11px); }
+.step__ui--phone { display: grid; justify-items: center; }
+.step__ui--phone .ui-phone { font-size: min(1.05vh, 0.85vw); }
+@media (max-width: 900px) {
+  .step__ui .ui { font-size: 2vw; }
+  .step__ui--phone .ui-phone { font-size: 2.2vw; }
+}
+
+/* ---------- Plans ---------- */
+.plans { padding: 0 0 var(--section); background: var(--mist); }
+.plans__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: stretch; padding-top: 8px; }
+.plan {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr auto;
+  gap: 16px;
+  padding: clamp(28px, 3vw, 44px);
+  border-radius: var(--radius-l);
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.plan--featured { background: var(--ink); color: var(--paper); box-shadow: none; }
+.plan__tag { position: absolute; top: 22px; right: 22px; padding: 4px 12px; border-radius: 999px; background: var(--green); color: var(--ink); font-size: 13px; font-weight: 600; }
+.plan__kind { font-size: 15px; font-weight: 500; color: var(--green-deep); }
+.plan--featured .plan__kind { color: var(--green); }
+.plan__name { font-size: var(--fs-m); font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; }
+.plan__price { display: grid; font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
+.plan__price small { font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+.plan__basis { font-size: 15px; color: var(--muted); }
+.plan--featured .plan__price small, .plan--featured .plan__basis { color: var(--muted-dark); }
+.plan .checklist { align-content: start; }
+.plan .checklist li { font-size: 16px; }
+.plan .btn { justify-self: start; }
+.plans__addon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 18px;
+  margin-top: 12px;
+  padding: 22px 28px;
+  border-radius: var(--radius-m);
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--line);
+  font-size: 17px;
+}
+.plans__addon b { font-weight: 600; }
+@media (max-width: 900px) { .plans__grid { grid-template-columns: 1fr; } }
+
+/* ---------- Products menu glyphs and cards ---------- */
+.mega { grid-template-columns: repeat(3, 196px); }
+.mega__card--crm { background: var(--mist); }
+.mega__card--rh { background: var(--yellow); }
+.mega__card--app { background: var(--ink); color: var(--paper); }
+.mega__glyph--crm { display: grid; grid-template-columns: 1fr 3fr; grid-template-rows: repeat(3, 1fr); gap: 6px; padding: 16px; }
+.mega__glyph--crm i { border-radius: 6px; background: #fff; box-shadow: 0 0 0 1px var(--line); }
+.mega__glyph--crm i:first-child { grid-row: 1 / -1; background: var(--green-soft); }
+.mega__glyph--rh { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 16px; align-items: start; }
+.mega__glyph--rh i { height: 80%; border-radius: 8px; background: rgba(255, 255, 255, 0.7); }
+.mega__glyph--rh i:nth-child(2) { height: 55%; }
+.mega__glyph--rh i:nth-child(3) { height: 35%; background: var(--paper); }
+.mega__glyph--app { display: grid; place-items: center; }
+.mega__glyph--app i { width: 46px; height: 92px; border-radius: 12px; background: var(--green); box-shadow: 0 0 0 4px #101517; }
+.more__card--crm { background: var(--mist); }
+.more__card--rh { background: var(--yellow); }
+.more__card--app { background: var(--ink); color: var(--paper); }
+
+/* The pinned sequence keeps its four steps on one screen. */
+.sequence .section-title { font-size: clamp(30px, 3.6vw, 56px); }
+.sequence__steps li { padding: 14px 0; }
+
+/* Phones: a smaller hero phone and stacked actions so nothing overlaps. */
+@media (max-width: 760px) {
+  .hero__product--ui .ui-phone { font-size: min(1.02vh, 2.2vw); }
+  .hero__product--ui { top: 46%; }
+  .hero__disc { top: 50%; }
+}
+@media (max-width: 480px) {
+  .hero__actions { flex-direction: column; gap: 10px; }
+  .hero__actions .btn { width: 100%; min-height: 48px; }
+}

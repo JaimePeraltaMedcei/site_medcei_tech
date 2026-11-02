@@ -45,7 +45,7 @@ export function initDay() {
       i.li.classList.toggle('is-on', visible.includes(i));
       i.li.classList.toggle('is-latest', i === visible[0]);
     });
-    now.textContent = visible[0]?.now ?? 'Bom dia, D. Amélia';
+    now.textContent = visible[0]?.now ?? 'Bom dia';
   };
 
   if (prefersReducedMotion()) {

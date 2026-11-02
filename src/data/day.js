@@ -1,18 +1,17 @@
-// Sample day shown in the Super App scene. Names and times are illustrative.
+// Sample day shown in the family app scene: what the app tells a family member.
+// Names and times are illustrative.
 export const DAY_START = 7 * 60;  // 07:00
 export const DAY_END = 23 * 60;   // 23:00
 
 export const events = [
-  { time: '07:30', tag: 'SmartDose', text: 'Carteira da manhã pronta, 3 comprimidos', now: 'A carteira da manhã está pronta' },
-  { time: '08:15', tag: 'Toma', text: 'Confirmada pela cuidadora Ana Lopes', now: 'Toma da manhã confirmada' },
-  { time: '10:00', tag: 'Cuidados', text: 'Ana chegou. Higiene e pequeno-almoço', now: 'A cuidadora está em casa' },
-  { time: '11:45', tag: 'SafeMove', alert: true, text: 'Desequilíbrio ao levantar. Alerta enviado à Medcei', now: 'O SafeMove avisou a Medcei' },
-  { time: '11:51', tag: 'Equipa Medcei', text: 'Ligou à D. Amélia. Está bem, sem queda', now: 'A equipa ligou: está tudo bem' },
-  { time: '14:30', tag: 'WoundCare', text: 'Ferida medida: 4,1 cm², a melhorar', now: 'A ferida está a melhorar' },
-  { time: '16:30', tag: 'SafeMove', text: 'Saída da zona segura: passeio no jardim', now: 'Passeio no jardim' },
-  { time: '18:00', tag: 'Vídeo-chamada', text: 'Rita falou 12 minutos com a mãe', now: 'Vídeo-chamada com a filha' },
-  { time: '20:00', tag: 'SmartDose', text: 'Carteira da noite pronta, 2 comprimidos', now: 'A carteira da noite está pronta' },
-  { time: '22:30', tag: 'SafeMove', text: 'Monitorização noturna ativa', now: 'Noite vigiada pelo SafeMove' },
+  { time: '08:00', tag: 'Horário', text: 'Hoje: visita das 9:00 às 11:00, com a Ana Lopes', now: 'O horário de hoje está na app' },
+  { time: '09:40', tag: 'Mensagem', text: 'Joana: a consulta de quinta é às 15h. A visita pode ser mais cedo?', now: 'A família escreveu à equipa' },
+  { time: '10:05', tag: 'Equipa', text: 'Resposta: a visita de quinta passa para as 13h, com a Sara', now: 'A equipa respondeu' },
+  { time: '12:30', tag: 'Cuidados', text: 'Plano de cuidados atualizado pela enfermeira', now: 'Plano de cuidados atualizado' },
+  { time: '15:20', tag: 'Documentos', text: 'Joana enviou a receita de novembro', now: 'Receita entregue sem sair de casa' },
+  { time: '17:45', tag: 'Evolução', text: 'Novo relatório de evolução: 74 em 100', now: 'Novo relatório de evolução' },
+  { time: '19:10', tag: 'Pagamentos', alert: true, text: 'Nova mensalidade disponível: 1 480 €', now: 'Nova mensalidade disponível' },
+  { time: '21:30', tag: 'Pagamentos', text: 'Pagamento recebido. Obrigado!', now: 'Mensalidade paga' },
 ];
 
 export const toMinutes = (hhmm) => {

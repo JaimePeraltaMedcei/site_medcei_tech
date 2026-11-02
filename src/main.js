@@ -23,6 +23,7 @@ import { initFaq } from './modules/faq.js';
 import { initContact } from './modules/contact.js';
 import { initFooter } from './modules/footer.js';
 import { initMagnetic } from './modules/magnetic.js';
+import { initUiFragments } from './modules/ui-fragments.js';
 
 // Every page loads this file; each module returns early when its section is absent.
 const reduced = prefersReducedMotion();
@@ -30,6 +31,7 @@ const lenis = reduced ? null : initSmoothScroll();
 
 initContact();
 initFaq();
+initUiFragments({ reduced });
 initTransitions({ reduced });
 
 if (reduced) {

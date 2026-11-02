@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <title>Medcei Tech, tecnologia que cuida</title>
-  <meta name="description" content="SafeMove, SmartDose, WoundCare e Super App: a tecnologia da Medcei para cuidar de quem vive em casa, para famílias e organizações de saúde.">
+  <title>Medcei Tech, software para empresas de cuidados</title>
+  <meta name="description" content="CRM, plataforma de recrutamento e app para famílias, feitos para empresas de cuidados ao domicílio. Por subscrição mensal.">
   <!-- include:head -->
 </head>
 <body data-page="home">
@@ -14,17 +14,17 @@
       <div class="hero__stage">
         <div class="hero__disc" data-hero-disc aria-hidden="true"><span></span></div>
         <h1 class="hero__title">
-          <span class="hero__line hero__line--a" data-hero-line>Tecnologia</span>
-          <span class="hero__line hero__line--b" data-hero-line>que cuida.</span>
+          <span class="hero__line hero__line--a" data-hero-line>Software para</span>
+          <span class="hero__line hero__line--b" data-hero-line>quem cuida.</span>
         </h1>
-        <figure class="hero__product" data-hero-product>
-          <img src="/images/safemove.png" alt="Penso SafeMove com botão SOS" width="782" height="782" fetchpriority="high">
-        </figure>
+        <div class="hero__product hero__product--ui" data-hero-product>
+<!-- include:ui/app-home -->
+        </div>
         <div class="hero__foot" data-hero-foot>
-          <p class="hero__lead">Quatro equipamentos e uma app que ligam quem vive em casa à família e à equipa Medcei, dia e noite.</p>
+          <p class="hero__lead">Um CRM, uma plataforma de recrutamento e uma app para as famílias, feitos para empresas de cuidados ao domicílio. Por subscrição mensal.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="/produtos/" data-magnetic>Ver os produtos</a>
-            <a class="btn btn--ghost" href="/organizacoes/" data-magnetic>Para organizações</a>
+            <a class="btn btn--primary" href="/contactos/" data-magnetic>Marcar demonstração</a>
+            <a class="btn btn--ghost" href="/produtos/" data-magnetic>Ver os produtos</a>
           </div>
         </div>
         <div class="hero__scroll" aria-hidden="true"><span></span></div>
@@ -33,127 +33,99 @@
 
     <section class="manifesto" aria-label="O que é a Medcei Tech" data-manifesto>
       <div class="manifesto__inner">
-        <p class="manifesto__text" data-manifesto-text>Um penso que deteta quedas. Uma máquina que prepara a medicação. Uma fotografia que mede feridas. E uma app que junta tudo e põe a família, o utente e a equipa Medcei na mesma conversa.</p>
+        <p class="manifesto__text" data-manifesto-text>Um CRM que junta o comercial, o planeamento, a ficha clínica, os recursos humanos e o financeiro. Uma plataforma que encontra, entrevista e contrata cuidadores. E uma app onde as famílias veem os cuidados, falam com a equipa e pagam. Feitos por uma empresa de cuidados, para empresas de cuidados.</p>
       </div>
     </section>
 
     <section class="numbers" aria-label="Em números">
       <ul class="numbers__grid">
         <li class="numbers__item" data-reveal>
-          <span class="numbers__value"><span data-count="24">24</span>/<span data-count="7">7</span></span>
-          <span class="numbers__label">monitorização contínua pela equipa Medcei</span>
+          <span class="numbers__value"><span data-count="15">15</span></span>
+          <span class="numbers__label">módulos no CRM, do primeiro contacto à reconciliação bancária</span>
         </li>
         <li class="numbers__item" data-reveal>
-          <span class="numbers__value"><span data-count="20">20</span></span>
-          <span class="numbers__label">medicamentos diferentes no SmartDose, ao mesmo tempo</span>
-        </li>
-        <li class="numbers__item" data-reveal>
-          <span class="numbers__value"><span data-count="4">4</span>+<span data-count="1">1</span></span>
-          <span class="numbers__label">equipamentos e uma app, num só sistema</span>
+          <span class="numbers__value"><span data-count="18">18</span></span>
+          <span class="numbers__label">secções na avaliação clínica de cada utente</span>
         </li>
         <li class="numbers__item" data-reveal>
           <span class="numbers__value"><span data-count="4">4</span></span>
-          <span class="numbers__label">equipas locais: Porto, Braga, Viana do Castelo e Aveiro</span>
+          <span class="numbers__label">ferramentas de IA no recrutamento: CV, anúncio, entrevista e pesquisa</span>
+        </li>
+        <li class="numbers__item" data-reveal>
+          <span class="numbers__value"><span data-count="3">3</span></span>
+          <span class="numbers__label">produtos ligados entre si, numa só subscrição se quiser</span>
         </li>
       </ul>
     </section>
 
     <section class="products" data-products>
       <div class="products__head">
-        <h2 class="section-title" data-split>Quatro produtos.<br>Um só sistema.</h2>
+        <h2 class="section-title" data-split>Três produtos.<br>Uma operação.</h2>
       </div>
 
       <div class="products__viewport" data-products-viewport>
         <nav class="products__index" aria-label="Produtos" data-products-index>
-          <a href="#safemove" class="is-active">SafeMove</a>
-          <a href="#smartdose">SmartDose</a>
-          <a href="#woundcare">WoundCare</a>
-          <a href="#superapp">Super App</a>
+          <a href="#crm" class="is-active">CRM</a>
+          <a href="#recrutamento">Recrutamento</a>
+          <a href="#app">App para famílias</a>
           <span class="products__progress" aria-hidden="true"></span>
         </nav>
         <div class="products__track" data-products-track>
 
-          <article class="panel panel--safemove" id="safemove" aria-labelledby="t-safemove">
+          <article class="panel panel--crm" id="crm" aria-labelledby="t-crm">
             <div class="panel__copy">
-              <p class="panel__kind">Prevenção de quedas</p>
-              <h3 class="panel__name" id="t-safemove">SafeMove</h3>
-              <p class="panel__desc">Um penso adesivo no braço que acompanha os movimentos dia e noite, deteta e previne quedas e avisa a Medcei no momento.</p>
+              <p class="panel__kind">Gestão da empresa</p>
+              <h3 class="panel__name" id="t-crm">CRM</h3>
+              <p class="panel__desc">Leads, orçamentos, contratos, planeamento das visitas, ficha clínica, colaboradores e financeiro, no mesmo sítio.</p>
               <ul class="panel__features">
-                <li>Deteção e prevenção automática de quedas</li>
-                <li>Alerta de saída da zona segura</li>
-                <li>Botão SOS para pedir ajuda</li>
+                <li>Pipeline comercial e calculadora de orçamentos</li>
+                <li>Planeamento diário de técnicos e viaturas</li>
+                <li>Previsão de tesouraria e reconciliação bancária</li>
               </ul>
               <div class="panel__cta">
-                <span class="status status--live">Disponível já</span>
-                <a class="btn btn--dark" href="/produtos/safemove/" data-magnetic>Conhecer o SafeMove</a>
+                <a class="btn btn--dark" href="/produtos/crm/" data-magnetic>Conhecer o CRM</a>
               </div>
             </div>
-            <div class="panel__stage">
-              <div class="panel__halo" aria-hidden="true"></div>
-              <img class="panel__img" data-parallax src="/images/safemove.png" alt="Penso SafeMove" width="782" height="782" loading="lazy">
+            <div class="panel__stage panel__stage--ui" data-parallax>
+<!-- include:ui/crm-leads -->
             </div>
           </article>
 
-          <article class="panel panel--smartdose" id="smartdose" aria-labelledby="t-smartdose">
+          <article class="panel panel--rh" id="recrutamento" aria-labelledby="t-rh">
             <div class="panel__copy">
-              <p class="panel__kind">Gestão de medicação</p>
-              <h3 class="panel__name" id="t-smartdose">SmartDose</h3>
-              <p class="panel__desc">Prepara sozinho a medicação de cada utente, separa as doses por toma e embala-as em carteiras descartáveis prontas a usar.</p>
+              <p class="panel__kind">Recrutamento</p>
+              <h3 class="panel__name" id="t-rh">Recrutamento</h3>
+              <p class="panel__desc">Publica vagas, lê CVs, grava e resume entrevistas e encontra a pessoa certa para cada utente, com a razão de cada escolha.</p>
               <ul class="panel__features">
-                <li>Até 20 medicamentos diferentes em simultâneo</li>
-                <li>Corte automático de comprimidos</li>
-                <li>Menos erros de medicação</li>
+                <li>Leitura de CV e anúncios gerados com IA</li>
+                <li>Entrevistas transcritas e pontuadas</li>
+                <li>Piquetes para cobrir faltas no próprio dia</li>
               </ul>
               <div class="panel__cta">
-                <span class="status">Disponível em breve</span>
-                <a class="btn btn--dark" href="/produtos/smartdose/" data-magnetic>Conhecer o SmartDose</a>
+                <a class="btn btn--dark" href="/produtos/recrutamento/" data-magnetic>Conhecer o Recrutamento</a>
               </div>
             </div>
-            <div class="panel__stage">
-              <div class="panel__halo" aria-hidden="true"></div>
-              <img class="panel__img" data-parallax src="/images/smartdose.png" alt="Equipamento SmartDose com ecrã tátil" width="516" height="484" loading="lazy">
+            <div class="panel__stage panel__stage--ui" data-parallax>
+<!-- include:ui/rh-pipeline -->
             </div>
           </article>
 
-          <article class="panel panel--woundcare" id="woundcare" aria-labelledby="t-woundcare">
+          <article class="panel panel--app" id="app" aria-labelledby="t-app">
             <div class="panel__copy">
-              <p class="panel__kind">Monitorização de feridas</p>
-              <h3 class="panel__name" id="t-woundcare">WoundCare</h3>
-              <p class="panel__desc">Uma fotografia em cada visita chega para a inteligência artificial medir a ferida, comparar com a semana anterior e avisar quando algo não está bem.</p>
+              <p class="panel__kind">Para os seus clientes</p>
+              <h3 class="panel__name" id="t-app">App para famílias</h3>
+              <p class="panel__desc">Os familiares dos seus clientes veem o horário, o plano de cuidados e os pagamentos, e falam com a sua equipa sem telefonemas.</p>
               <ul class="panel__features">
-                <li>Análise automática com IA</li>
-                <li>Alertas de complicações</li>
-                <li>Partilha segura com médicos</li>
+                <li>Ligada ao CRM em tempo real</li>
+                <li>Entrada com código por email, sem palavra-passe</li>
+                <li>Acesso partilhado com permissões por familiar</li>
               </ul>
               <div class="panel__cta">
-                <span class="status">Disponível em breve</span>
-                <a class="btn btn--dark" href="/produtos/woundcare/" data-magnetic>Conhecer o WoundCare</a>
+                <a class="btn btn--light" href="/produtos/app-familias/" data-magnetic>Conhecer a app</a>
               </div>
             </div>
-            <div class="panel__stage">
-              <!-- include:report -->
-            </div>
-          </article>
-
-          <article class="panel panel--superapp" id="superapp" aria-labelledby="t-superapp">
-            <div class="panel__copy">
-              <p class="panel__kind">A app que junta tudo</p>
-              <h3 class="panel__name" id="t-superapp">Super App</h3>
-              <p class="panel__desc">Liga a família, o utente e a equipa Medcei. Junta o que os equipamentos registam, os dados do SNS e as vídeo-chamadas num só ecrã.</p>
-              <ul class="panel__features">
-                <li>Comunicação em tempo real</li>
-                <li>Integração com o SNS</li>
-                <li>Dashboard familiar completo</li>
-              </ul>
-              <div class="panel__cta">
-                <span class="status status--live">Incluída com cada equipamento</span>
-                <a class="btn btn--light" href="/produtos/super-app/" data-magnetic>Conhecer a Super App</a>
-              </div>
-            </div>
-            <div class="panel__stage">
-              <div class="phone phone--shot" data-parallax>
-                <img src="/images/superapp.png" alt="Ecrã inicial da Super App Medcei" width="375" height="666" loading="lazy">
-              </div>
+            <div class="panel__stage panel__stage--ui" data-parallax>
+<!-- include:ui/app-care -->
             </div>
           </article>
 
@@ -161,34 +133,58 @@
       </div>
     </section>
 
-    <!-- include:day -->
+    <section class="sequence" aria-labelledby="t-seq" data-sequence>
+      <div class="container sequence__stage">
+        <div class="sequence__copy">
+          <h2 class="section-title" id="t-seq">Do contacto ao pagamento</h2>
+          <ol class="sequence__steps">
+            <li><span class="sequence__n">1</span><div><h3>A lead entra no CRM</h3><p>O pedido fica no pipeline e o orçamento sai da calculadora, com os seus preços e escalões.</p></div></li>
+            <li><span class="sequence__n">2</span><div><h3>O recrutamento encontra quem cuida</h3><p>Descreva o utente numa frase e receba os candidatos ordenados, com a razão de cada pontuação.</p></div></li>
+            <li><span class="sequence__n">3</span><div><h3>O planeamento põe a equipa no terreno</h3><p>A visita entra na grelha do técnico e a ficha clínica do utente fica pronta.</p></div></li>
+            <li><span class="sequence__n">4</span><div><h3>A família acompanha e paga na app</h3><p>Horário, cuidados, mensagens e mensalidades, sem telefonemas para o escritório.</p></div></li>
+          </ol>
+        </div>
+        <div class="sequence__visual">
+          <span class="sequence__disc" aria-hidden="true"></span>
+          <div class="sequence__device">
+<!-- include:ui/app-payments -->
+          </div>
+          <ul class="sequence__chips" aria-hidden="true">
+            <li class="chip"><b>CRM</b>Nova lead: Família Rocha, orçamento de 1 240 € por mês</li>
+            <li class="chip"><b>Recrutamento</b>Inês Barros, 94 de compatibilidade</li>
+            <li class="chip"><b>Planeamento</b>Terça, 9h: Ana Lopes alocada</li>
+            <li class="chip chip--ok"><b>App</b>Pagamento recebido. Obrigado!</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <section class="split-band" aria-labelledby="t-orgs-band">
+    <section class="split-band" aria-labelledby="t-origin">
       <div class="container split-band__grid">
         <figure class="split-band__media" data-reveal>
           <img src="/images/cuidadora-idosa.png" alt="Cuidadora da Medcei com uma senhora idosa em casa" width="1528" height="820" loading="lazy" data-drift>
         </figure>
         <div class="split-band__copy">
-          <h2 class="section-title" id="t-orgs-band" data-split>Para lares, hospitais, farmácias e seguradoras</h2>
-          <p data-reveal>Os mesmos equipamentos, num painel para a equipa inteira. Preço por volume, instalação e formação no local e integração com os vossos sistemas.</p>
+          <h2 class="section-title" id="t-origin" data-split>Usado primeiro por nós</h2>
+          <p data-reveal>A Medcei presta cuidados ao domicílio. O CRM, o recrutamento e a app nasceram para resolver os problemas da nossa própria operação, antes de os disponibilizarmos a outras empresas do setor.</p>
           <div class="split-band__actions" data-reveal>
-            <a class="btn btn--dark" href="/organizacoes/" data-magnetic>Soluções para organizações</a>
-            <a class="link" href="/contactos/?para=organizacao">Pedir proposta</a>
+            <a class="btn btn--dark" href="/sobre/" data-magnetic>Sobre a Medcei Tech</a>
+            <a class="link" href="/contactos/">Marcar demonstração</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="paths" aria-label="Por onde começar">
+    <section class="paths" aria-label="Por onde continuar">
       <div class="container paths__grid">
         <a class="path path--price" href="/precos/" data-reveal>
           <span class="path__label">Preços</span>
-          <span class="path__title">SafeMove com Super App desde 24,90 € por mês</span>
+          <span class="path__title">Subscrição mensal por produto ou da plataforma completa</span>
           <span class="path__go" aria-hidden="true"></span>
         </a>
         <a class="path path--help" href="/ajuda/" data-reveal>
           <span class="path__label">Ajuda</span>
-          <span class="path__title">Como começar e perguntas frequentes</span>
+          <span class="path__title">Implementação, migração de dados e RGPD</span>
           <span class="path__go" aria-hidden="true"></span>
         </a>
         <a class="path path--about" href="/sobre/" data-reveal>

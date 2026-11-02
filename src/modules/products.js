@@ -61,10 +61,10 @@ export function initProducts() {
       if (visual) {
         gsap.fromTo(
           visual,
-          { xPercent: 30, rotation: 8 },
+          { xPercent: 18, rotation: visual.tagName === 'IMG' ? 8 : 0 },
           {
-            xPercent: -30,
-            rotation: -8,
+            xPercent: -18,
+            rotation: visual.tagName === 'IMG' ? -8 : 0,
             ease: 'none',
             scrollTrigger: { trigger: panel, containerAnimation: slide, start: 'left right', end: 'right left', scrub: true },
           },

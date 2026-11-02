@@ -23,7 +23,7 @@
   inset: calc(var(--nav-h) + 3vh) var(--gutter) auto;
   z-index: 3;
   pointer-events: none;
-  font-size: var(--fs-mega);
+  font-size: clamp(56px, 10.4vw, 188px);
   font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.055em;
@@ -73,7 +73,7 @@
 @keyframes scrollcue { from { transform: translateY(-100%); } to { transform: translateY(260%); } }
 
 @media (max-width: 760px) {
-  .hero__title { inset: calc(var(--nav-h) + 3vh) var(--gutter) auto; font-size: clamp(54px, 16vw, 96px); }
+  .hero__title { inset: calc(var(--nav-h) + 3vh) var(--gutter) auto; font-size: clamp(38px, 11.6vw, 88px); }
   .hero__line--b { margin-top: 0.1em; text-align: left; }
   .hero__disc, .hero__product { top: 54%; }
   .hero__disc { width: 74vw; }

@@ -1,0 +1,39 @@
+<div class="ui" role="img" aria-label="Painel do módulo Financeiro do CRM, com entradas, saídas e resultado dos últimos seis meses e o saldo de cada conta">
+  <div class="ui-window">
+    <div class="ui-window__bar"><i></i><i></i><i></i><span class="ui-window__url">CRM · Financeiro</span></div>
+    <div class="ui-window__body">
+<!-- include:ui/crm-sidebar -->
+      <div class="ui-main">
+        <div class="ui-head"><div><p class="ui-title">Financeiro</p><p class="ui-sub">Últimos 6 meses, todas as contas</p></div><span class="ui-btn ui-btn--ghost">Importar extrato</span></div>
+        <div class="ui-tabs"><span class="ui-tab is-on">Dashboard</span><span class="ui-tab">Previsão</span><span class="ui-tab">Reconciliação</span><span class="ui-tab">Movimentos</span><span class="ui-tab">Recorrentes</span><span class="ui-tab">Regras</span></div>
+        <div class="ui-grid ui-grid--3" style="margin-bottom:.8em">
+          <div class="ui-card"><p class="ui-card__label">Entradas</p><p class="ui-card__value">48 320 €</p><p class="ui-card__delta">+8,4% vs. período anterior</p></div>
+          <div class="ui-card"><p class="ui-card__label">Saídas</p><p class="ui-card__value">31 870 €</p><p class="ui-card__delta ui-card__delta--down">+3,1% vs. período anterior</p></div>
+          <div class="ui-card"><p class="ui-card__label">Resultado líquido</p><p class="ui-card__value">16 450 €</p><p class="ui-card__delta">Margem de 34%</p></div>
+        </div>
+        <div class="ui-grid ui-grid--2">
+          <div class="ui-card">
+            <div class="ui-head" style="margin:0"><p class="ui-section" style="margin:0">Entradas e saídas por mês</p><p class="ui-legend"><span><i></i>Entradas</span><span><i class="alt"></i>Saídas</span></p></div>
+            <div class="ui-bars" data-ui-bars>
+              <div class="ui-bars__col"><span style="--v:62"></span><span style="--v:48"></span></div>
+              <div class="ui-bars__col"><span style="--v:70"></span><span style="--v:51"></span></div>
+              <div class="ui-bars__col"><span style="--v:66"></span><span style="--v:55"></span></div>
+              <div class="ui-bars__col"><span style="--v:78"></span><span style="--v:52"></span></div>
+              <div class="ui-bars__col"><span style="--v:84"></span><span style="--v:57"></span></div>
+              <div class="ui-bars__col"><span style="--v:92"></span><span style="--v:60"></span></div>
+            </div>
+            <div class="ui-axis"><span>mai</span><span>jun</span><span>jul</span><span>ago</span><span>set</span><span>out</span></div>
+          </div>
+          <div class="ui-card">
+            <p class="ui-section">Saldo por conta</p>
+            <div class="ui-rows">
+              <div class="ui-row"><b>Conta principal<small>Banco A</small></b><span class="ui-num">21 940 €</span></div>
+              <div class="ui-row"><b>Conta salários<small>Banco B</small></b><span class="ui-num">8 315 €</span></div>
+              <div class="ui-row"><b>Por reconciliar</b><span class="ui-badge ui-badge--yellow">7 movimentos</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

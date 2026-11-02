@@ -1,4 +1,4 @@
-// Contact form: takes presets from the address (?para=organizacao&interesse=SmartDose),
+// Demo request form: takes the product from the address (?interesse=CRM),
 // validates, then opens the visitor's email with the request ready.
 const EMAIL = 'geral@medcei.com';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -9,21 +9,11 @@ export function initContact() {
 
   const { elements } = form;
   const error = form.querySelector('[data-form-error]');
-  const orgOnly = form.querySelectorAll('[data-org-only]');
 
-  const syncAudience = () => {
-    const forOrg = elements.para.value === 'organizacao';
-    orgOnly.forEach((el) => { el.hidden = !forOrg; });
-  };
-
-  const params = new URLSearchParams(location.search);
-  if (params.get('para') === 'organizacao') elements.para.value = 'organizacao';
-  const interest = params.get('interesse');
+  const interest = new URLSearchParams(location.search).get('interesse');
   if (interest && [...elements.interesse.options].some((o) => o.value === interest)) {
     elements.interesse.value = interest;
   }
-  syncAudience();
-  form.addEventListener('change', (e) => e.target.name === 'para' && syncAudience());
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -31,30 +21,30 @@ export function initContact() {
 
     const checks = [
       [elements.nome, value('nome') !== '', 'o seu nome'],
+      [elements.empresa, value('empresa') !== '', 'o nome da empresa'],
       [elements.email, EMAIL_RE.test(value('email')), 'um email válido'],
     ];
     checks.forEach(([field, ok]) => field.setAttribute('aria-invalid', String(!ok)));
     const missing = checks.filter(([, ok]) => !ok);
     if (missing.length) {
-      error.textContent = `Falta ${missing.map(([, , label]) => label).join(' e ')}.`;
+      const labels = missing.map(([, , label]) => label);
+      error.textContent = `Falta ${labels.length > 1 ? `${labels.slice(0, -1).join(', ')} e ${labels.at(-1)}` : labels[0]}.`;
       missing[0][0].focus();
       return;
     }
     error.textContent = '';
 
-    const forOrg = elements.para.value === 'organizacao';
     const product = value('interesse');
-    const subject = forOrg ? `Proposta para organização: ${product}` : `Pedido de informação: ${product}`;
+    const subject = `Pedido de demonstração: ${product} (${value('empresa')})`;
     const body = [
-      'Olá Medcei,',
+      'Olá Medcei Tech,',
       '',
-      forOrg
-        ? `Represento uma organização de saúde e gostaria de receber uma proposta para ${product}.`
-        : `Gostaria de saber mais sobre ${product} para a minha família.`,
+      `Gostaria de marcar uma demonstração de: ${product}.`,
       value('mensagem') ? `\n${value('mensagem')}` : null,
       '',
       `Nome: ${value('nome')}`,
-      forOrg && value('organizacao') ? `Organização: ${value('organizacao')}` : null,
+      `Empresa: ${value('empresa')}`,
+      `Tamanho da equipa: ${value('equipa')}`,
       `Email: ${value('email')}`,
       value('telefone') ? `Telefone: ${value('telefone')}` : null,
     ].filter((line) => line !== null).join('\n');

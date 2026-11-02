@@ -8,7 +8,7 @@ export function initSequence() {
 
   const steps = [...section.querySelectorAll('.sequence__steps > li')];
   const chips = [...section.querySelectorAll('.sequence__chips > li')];
-  const visual = section.querySelector('.sequence__img, .sequence__photo');
+  const visual = section.querySelector('.sequence__img, .sequence__photo, .sequence__device');
 
   const show = (index) => {
     steps.forEach((li, i) => li.classList.toggle('is-active', i === index));
@@ -33,7 +33,7 @@ export function initSequence() {
         },
       },
     });
-    if (visual) tl.fromTo(visual, { rotation: -8, scale: 0.92 }, { rotation: 8, scale: 1.04, ease: 'none' });
+    if (visual) tl.fromTo(visual, { rotation: -6, scale: 0.94 }, { rotation: 4, scale: 1.02, ease: 'none' });
     return () => show(steps.length - 1);
   });
 
