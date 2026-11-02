@@ -139,3 +139,7 @@
   .mega { display: none; }
   .nav__item > a::after { display: none; }
 }
+
+/* Safety net: if the script never runs, the curtain gets out of the way on its own. */
+@keyframes curtain-off { to { visibility: hidden; } }
+.is-returning .curtain { animation: curtain-off 0.01s 4s forwards; }
